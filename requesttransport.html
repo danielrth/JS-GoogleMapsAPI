@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HealthNet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.mobile.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script><!--<script type="text/javascript" src="cordova.js"></script>-->
+<script src="js/jquery.js"></script><script src="js/jquery.mobile.js"></script>
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJU83ESqDw_gnWQyD8C2GTeG2bP519YBQ&sensor=true"></script> -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="js/gmap3.js"></script><script src="js/jquery.noclickdelay.js"></script><script src="js/init.js"></script>
+</head>
+<body>
+
+<!--
+<div id="mappage" class="demo-wrapper" data-role="page">
+  <div data-title="map">
+    
+    <div data-role="content" style="width:100%; min-height:100%; padding:0;">
+      <div data-role="navbar" data-position="fixed">
+        <ul style="position: fixed; bottom: 0; width: 100%;"><li><a href="#positionWindow" class="ui-btnheli button" data-rel="popup" data-position-to="window"><img src="img/heli.png"/> Request Air Transport xx</a></li>
+        </ul>
+
+      <a href="#" id="demo-phone" style="display:none;">Call</a>
+      <div id="map_canvas" style="width:100%;height:calc(100% - 62px);"></div>
+      <div data-role="popup" id="positionWindow"> <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        <p class="popupcontent">Location not found.<br/>
+          Try again.</p>
+      </div>
+    </div>
+    
+    -->
+    
+   <div id="mappage" class="demo-wrapper" data-role="page">
+  <div data-title="map">
+    
+    <div class="header" data-role="header" style="position: absolute; z-index: -1000;">
+      
+      
+    </div>
+    <div data-role="content" style="width:100%; min-height:100%; padding:0;">
+      <div data-role="navbar" data-position="fixed">
+        <ul style="position: fixed; bottom: 0; width: 100%;">
+          <!-- <li onClick="showAllLoc();"><a href="#" class="ui-btn-active">Show All Loc</a></li><li onClick="findClosestLoc();"><a href="#">Find Closest Loc</a></li><li><a href="#" id="callMed">Call MedCom</a></li>-->
+          <li><a href="#positionWindow" class="ui-btnheli button" data-rel="popup" data-position-to="window"><img src="img/heli.png"/> Request Helicopter</a></li>
+        </ul>
+      </div>
+      <a href="#" id="demo-phone" style="display:none;">Call</a>
+      <div id="map_canvas" style="width:100%;height:100%;"></div>
+      <div data-role="popup" id="positionWindow"> <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        <p class="popupcontent">Location not found.<br/>
+          Try again.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
