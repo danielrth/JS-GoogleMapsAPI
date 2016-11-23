@@ -108,7 +108,7 @@ function findClosestLoc() {
         }
     })
 }
-for (var firebaseURL = "https://hnapp.firebaseio.com/", firebaseUpdateURL = "https://hnscrolling.firebaseio.com/", myDataRef = new Firebase(firebaseURL), myUpdateDataRef = new Firebase(firebaseUpdateURL), mlat, mlng, closestLatlng, myLatLng, c = 0, u = 0, tagArr = [], latlngs = [{
+for (var mlat, mlng, closestLatlng, myLatLng, c = 0, u = 0, tagArr = [], latlngs = [{
 	latLng: [39.653451, -79.956858],
 	data: 'Base 1<br />West Virginia University Hospitals<br/>Phone: <a href="tel:800-255-2146">(800)255-2146</a>',
 	phone: "800-255-2146",
@@ -453,15 +453,7 @@ for (var firebaseURL = "https://hnapp.firebaseio.com/", firebaseUpdateURL = "htt
 
 
     i = 0; i < latlngs.length; i++) latlngs[i].tag = "myTag" + i, tagArr.push(latlngs[i].tag);
-myDataRef.on("child_added", function(a) {
-    c++;
-    var b = a.val();
-    5 >= c && displayPostMessage(b.title, b.date, b.message)
-}), myUpdateDataRef.on("child_added", function(a) {
-    u++;
-    var b = a.val();
-    5 >= u && displayUpdateMessage(b.title), $("#vticker").vTicker()
-}), $(document).on("pageshow", "#mappage", function() {
+ $(document).on("pageshow", "#mappage", function() {
     max_height(), $("#map_canvas").gmap3({
         map: {
             options: {
